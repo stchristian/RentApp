@@ -15,6 +15,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabDots"
+        app:layout_constraintTop_toBottomOf="@id/vpImageGallery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"/>
+
     <TextView
         android:id="@+id/tvGadgetName"
         android:layout_width="wrap_content"
@@ -23,7 +34,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vpImageGallery" />
+        app:layout_constraintTop_toBottomOf="@id/tabDots" />
 
     <TextView
         android:id="@+id/tvGadgetDescription"

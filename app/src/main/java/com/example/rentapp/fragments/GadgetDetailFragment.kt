@@ -19,12 +19,10 @@ class GadgetDetailFragment : Fragment() {
         const val TAG = "GADGET_DETAIL_FRAGMENT_TAG"
     }
 
-
-
     private var gadget: Gadget? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val rootView =inflater.inflate(R.layout.gadget_detail, container, false)
+        val rootView = inflater.inflate(R.layout.gadget_detail, container, false)
         return rootView
     }
 
@@ -37,11 +35,9 @@ class GadgetDetailFragment : Fragment() {
         //TODO: bind data to view
         this.gadget?.let {
             vpImageGallery.adapter = ImagePagerAdapter(it.images, activity as Activity)
+            tabDots.setupWithViewPager(vpImageGallery)
             tvGadgetName.text = it.name
             tvGadgetDescription.text = it.description
         }
-
-
-
     }
 }
