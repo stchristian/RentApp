@@ -2,10 +2,12 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
+    android:id="@+id/detailContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vpImageGallery"
@@ -17,47 +19,63 @@
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabDots"
-        app:layout_constraintTop_toBottomOf="@id/vpImageGallery"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vpImageGallery"
         app:tabBackground="@drawable/tab_selector"
         app:tabGravity="center"
-        app:tabIndicatorHeight="0dp"/>
+        app:tabIndicatorHeight="0dp" />
 
     <TextView
         android:id="@+id/tvGadgetName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Eszköz név"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabDots" />
+        app:layout_constraintTop_toBottomOf="@id/tabDots"
+        tools:text="Eszköz név" />
+
+    <TextView
+        android:id="@+id/tvGadgetStatus"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Státusz"
+        android:text="Státusz: Szabad"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvGadgetName"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <TextView
         android:id="@+id/tvGadgetDescription"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        tools:text="Eszköz leírása"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGadgetName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvGadgetName"
+        tools:text="Eszköz leírása" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnRent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/rent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
