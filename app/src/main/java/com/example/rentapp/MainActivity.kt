@@ -93,6 +93,7 @@ class MainActivity : AppCompatActivity(), OnGadgetItemClickListener {
         ft.addToBackStack(GadgetListFragment.TAG)
         ft.commit()
         currentFragment = gadgetListFragment
+        toolbar.setTitle(R.string.gadget_list)
     }
 
     private fun setUpNavigationView() {
@@ -125,6 +126,7 @@ class MainActivity : AppCompatActivity(), OnGadgetItemClickListener {
         ft.addToBackStack(AddGadgetFragment.TAG)
         ft.commit()
         currentFragment = addGadgetFragment
+        toolbar.setTitle(R.string.add_gadget)
     }
 
     private fun myRentsFragment() {

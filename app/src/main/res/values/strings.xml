@@ -22,5 +22,8 @@
     <string name="no_account">Nem regisztrált? Itt megteheti</string>
     <string name="preference_file_key">com.example.rentapp.preference_file</string>
     <string name="add_gadget">Eszköz hozzáadása</string>
+    <string name="gadget_list">Eszközlista</string>
+    <string name="gadget_rent">Eszköz kölcsönzése</string>
+
     <string name="registration">Regisztráció</string>
 </resources>

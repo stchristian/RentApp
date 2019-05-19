@@ -28,7 +28,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:src="@drawable/ic_camera_icon"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+
+        android:src="@drawable/ic_qr_code"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerGadget"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
